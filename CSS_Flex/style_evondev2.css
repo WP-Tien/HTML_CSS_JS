@@ -1,0 +1,42 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.list__item {
+  width: 20%;
+  height: 10rem;
+  background-color: red;
+}
+
+.list__item:last-child {
+  margin-left: auto;
+}
+
+/* list2 */
+.list2 {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.list__item2 {
+  width: 20%;
+  height: 10rem;
+  background-color: red;
+}
+
+@media screen and (max-width: 767px) {
+  .list__item2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

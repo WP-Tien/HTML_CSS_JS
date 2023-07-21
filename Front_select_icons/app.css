@@ -1,0 +1,17 @@
+body {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  background-color: blueviolet;
+  border: 1px solid red;
+  padding: 1px;
+}

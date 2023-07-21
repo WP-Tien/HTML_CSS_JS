@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: row; /* row, column ... hướng của flex */
+  justify-content: flex-end; /* start, end, center, space-between, space-around, space-evenly */
+  height: 250px;
+  align-items: flex-end; /* flex-end, flex-start, center, stretch( kéo dài ra bằng đối tượng cha ) */
+}
+
+.container-2 {
+  display: flex;
+  height: 250px;
+  background-color: lightblue;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 
+flex-grow: chia phần dư  còn lại cho các child
+flex-basis: */
+.container-3 {
+  display: flex;
+  background-color: #ddd;
+  color: #fff;
+  flex-direction: row;
+}
+
+.child-3-1 {
+  background-color: red;
+  flex-basis: 150px;
+  /* flex-grow: 1; */
+}
+
+.child-3-2 {
+  background-color: blue;
+  flex-basis: 200px;
+  flex-grow: 1; /* Chia phần dư còn lại tất cả cho child-3-2 */
+}
+
+.child-3-3 {
+  background-color: green;
+  flex-basis: 150px;
+  /* flex-grow: 1; */
+}

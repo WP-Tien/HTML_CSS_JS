@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nguyễn Hữu Tiến Demo vô địch</title>
+    <style>
+        :root {
+            --mouse-x: 0px;
+            --mouse-y: 0px;
+        }
+
+        #tooltip {
+            position: absolute;
+            color: white;
+            border-bottom: 5px solid #373737;
+            border-radius: 50%;
+            background-color: #e1a2279c;
+            padding: 15px;
+            left: var(--mouse-x);
+            top: var(--mouse-y);
+        }
+
+        html,
+        body {
+            background-color: #f4eee2;
+        }
+
+        .wrap {
+            height: auto;
+            width: auto;
+            display: block;
+            position: relative;
+
+        }
+
+        .wrap ruby {
+            margin-top: 2%;
+            border-radius: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ff0057;
+            position: absolute;
+            font-weight: bold;
+            z-index: 999999;
+            background-color: #373737;
+            padding: 5px;
+            line-height: 40px;
+            border-bottom: 5px solid #e91e63;
+        }
+
+        .wrap .wrap-img {
+            position: absolute;
+            margin: 0 auto;
+            left: 50%;
+            transform: translate(-50%, 20%);
+            /* border: 1px solid red; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <ruby> かいはつしゃ <rt> --- Developer --- </rt> </ruby>
+
+        <div class="wrap-img"
+            style="background-image: url('Butcher_Guide_Round_1024x1024.jpg'); background-size: contain; background-repeat: no-repeat">
+            <canvas id="myCanvas" style="position: absolute; opacity: 4; top: 0;" width="664" height="295" ;></canvas>
+            <img id="event" src="Butcher_Guide_Round_1024x1024.jpg" alt="Mypet" style="width: 100%; height: auto; opacity: 0;" usemap="#myImg" alt="myImg">
+        </div>
+
+        <map name="myImg">
+
+            <area shape="poly" coords=" 280,34, 360,35, 359,135, 282, 135, 275,110, 275,65, 280,34" alt="Sun" href="#" id="rib" data-tt="This is rib-part">
+
+        </map>
+    </div>
+
+    <script>
+        function setup() {
+            var canvas = document.getElementById('myCanvas');
+
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                ctx.strokeStyle = '#989aa2';
+
+                ctx.moveTo(283, 34);
+                ctx.lineTo(333, 38);
+                ctx.lineTo(366, 36);
+                ctx.lineTo(363, 80);
+                ctx.lineTo(363, 137);
+                ctx.lineTo(284, 136);
+                ctx.lineTo(279, 110);
+                ctx.lineTo(279, 65);
+                ctx.lineTo(283, 34);
+                ctx.stroke();
+                
+                ctx.fillStyle = '#000000ab';
+                ctx.fill();
+            }
+
+        }
+        var event = document.getElementById('rib');
+
+        event.addEventListener('mouseover', function() {
+            // event canvas
+            setup();
+
+            // event toottip
+            var data = event.dataset.tt;
+            var text = document.createElement('p');
+
+            text.setAttribute('id', 'tooltip');
+            document.body.appendChild(text);
+            text.appendChild(document.createTextNode(data));
+        });
+
+        event.addEventListener('mouseout', function() {
+            // event canvas
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // event tool-tip
+            document.getElementById('tooltip').remove();
+        });
+
+        event.addEventListener('mousemove', function(e){
+            // event tool-tip
+            var mousex = e.pageX + 20;
+            var mousey = e.pageY;
+
+            document.getElementById('tooltip').style.setProperty('--mouse-x', mousex + "px");
+            document.getElementById('tooltip').style.setProperty('--mouse-y', mousey + "px");
+        });
+
+
+
+    </script>
+</body>
+
+</html>

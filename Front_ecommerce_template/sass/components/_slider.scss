@@ -1,0 +1,149 @@
+// Hero area
+.hero,
+.hero {
+  .glide {
+    &__slides {
+      background-color: $primaryColor;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+}
+
+.hero {
+  .glide {
+    &__bullet {
+      background-color: $black;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    &__arrow {
+      padding: 1.5rem 1.7rem;
+      opacity: 0;
+      border: none;
+      background-color: $grey;
+      transition: all 0.5s ease-in-out 0.2s;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $black;
+      }
+
+      &--left {
+        left: 20rem;
+      }
+
+      &--right {
+        position: absolute;
+        right: 20rem;
+      }
+
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: $primaryColor;
+      }
+    }
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 114rem;
+    margin: 0 auto;
+    height: 100%;
+    padding-top: 3rem;
+  }
+
+  &__left {
+    padding: 0 3rem;
+    flex: 0 0 50%;
+    h1 {
+      margin: 1rem 0;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .hero__btn:hover {
+      font-weight: 700;
+      background-color: transparent;
+      color: $black;
+    }
+  }
+
+  &__right {
+    flex: 0 0 50%;
+    position: relative;
+    text-align: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    background-color: $black;
+    color: $primaryColor;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 1.5rem 4rem;
+    border: 1px solid $black;
+    transition: all 0.3s ease-in-out;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:hover {
+    .glide {
+      &__arrow {
+        opacity: 1;
+        &--left {
+          left: 23rem;
+        }
+
+        &--right {
+          right: 23rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .hero {
+    &__center {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__right {
+      top: 50%;
+      position: absolute;
+      img {
+        width: 55%;
+      }
+    }
+
+    &__left {
+      position: absolute;
+      padding: 0 1rem;
+      top: 20%;
+    }
+
+    &__btn {
+      padding: 1.1rem 2.8rem;
+    }
+
+    .glide {
+      &__arrows {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+
+        .course-item {
+            background-color: orange;
+            height: 260px;
+            text-align: center;
+        }
+
+        h3 {
+            padding: 100px 0;
+            font-size: 40px;
+            color: #fff;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<!-- 
+    Column: .col
+    Prefix class:
+    - c - mobile
+    - m - tablet
+    - l - PC
+-->
+<body>
+    <div class="grid wide container">
+        <div class="row">
+            <div class="col l-3 m-6">
+                <div class="course-item">
+                    <h3>Course 1</h3>
+                </div>
+            </div>
+            <div class="col l-3 m-6">
+                <div class="course-item">
+                    <h3>Course 2</h3>
+                </div>
+            </div>
+            <div class="col l-3 m-6">
+                <div class="course-item">
+                    <h3>Course 3</h3>
+                </div>
+            </div>
+            <div class="col l-3 m-6">
+                <div class="course-item">
+                    <h3>Course 4</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

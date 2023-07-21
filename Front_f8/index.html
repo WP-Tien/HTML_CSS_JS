@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> F8 - Shop </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            header {
+                width: 100%;
+                margin-top: 140px;
+                position: sticky;
+                position: -webkit-sticky;
+                top: 0;
+                height: 100px;
+                background-color: #333;
+                padding: 20px;
+                box-sizing: border-box;
+                /* position: fixed; */
+                border: 10px dashed #fff;
+                background-clip: content-box;
+            }
+
+            footer {
+               width: 100%;
+               height: 100vh;
+               border: 10px dashed red;
+               /* background-image: url('/no-image.png'), url('/no-image.png'); */
+               /* background-image: linear-gradient(90deg, rgba(255, 255, 0, .5), rgba(0, 0, 255, .5) ), url('/no-image.png'); */
+               /* background-size: 100% auto; */
+               /* background-size: contain; */
+               /* background-size: cover; */
+               /* background-repeat: no-repeat; */
+               /* background-origin: content-box; */
+               /* background-position: top 20px right 20px; */
+               /* background-position: 0 0; */
+               background: url('/no-image.png') no-repeat center / contain;
+            }
+
+            h2#heading.heading { /* Equal specificity */
+                color: violet;
+            }
+
+            #heading {
+                color: orange;
+            }
+
+            .heading {
+                color: green;
+            }
+
+            h2 {
+                color: black;
+                /* font-size: 40px; */
+                /* 1rem == 40px theo html tag */
+                /* font-size: 1rem;  */
+                font-size: 2em;
+            }
+
+            div {
+                font-size: 30px;
+            }
+
+            .box {
+                /* width: 50%; */
+                width: 50vw;
+                height: 500px;
+                background-color: red;
+            }
+
+            .box::before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+            }
+
+            .box::after {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-color: #fff;
+            }
+
+            .pre-box {
+                width: 60px;
+                height: 60px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                float: left;
+            }
+
+            .box1 {
+                background-color: #333;
+            }
+
+            .box2 {
+                background-color: orange;
+                margin-left: 50px;
+            }
+
+            .box3 {
+                background-color: firebrick;
+                padding: 10px;
+                border-color: #333;
+                border-width: 10px;
+                border-style: dashed;
+                margin-top: 20px;
+            }
+
+            .box-sizing {
+                width: 500px;
+                height: 500px;
+                color: #fff;
+                background-color: darkorchid;
+                padding: 50px;
+                border: 2px solid #333;
+                box-sizing: border-box;
+            }
+
+            a::after {
+                content: "(" attr(href) ")";
+            }
+
+            .box::after {
+                content: attr(data-title);
+            }
+
+            li:first-child {
+                color: red;
+            }
+
+            li:last-child {
+                color: green;
+            }
+
+            p::first-line {
+                color: red;
+            }
+
+            p::first-letter {
+                color: green;
+                font-size: 120px;
+            }
+            
+            p::selection{
+                color: violet;
+                background-color: darkslateblue;
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <a href="https://www.facebook.com/"> Code nữa đi </a>
+        <div class="box" data-title="Dữ liệu box">
+            <h2>Heading inside div</h2>
+        </div>
+        <p>Purple <br> is beatiful color</p>
+        <h2>Heading tag</h2>
+        <h2 class="heading">Heading tag with class</h2>
+        <h2 class="heading" id="heading">Heading tag with class and id</h2>
+        <h2 style="color: blue" class="heading" id="heading">Heading tag with class, id and inline</h2>
+        <p class="variables"> Variables in CSS </p>
+        <hr>
+        <div class="pre-box box1">Box 1</div>
+        <div class="pre-box box2">Box 2</div>
+        <div class="pre-box box3">Box 3</div>
+        <br>
+        <br>
+        <br>
+        <!-- padding to quá thì bị đẩy kích thước ra -->
+        <div class="box-sizing"></div> 
+        <ul>
+            <li>1. Something cool</li>
+            <li>2. Rock man</li>
+            <li>3. Bad guy</li>
+            <li>4. Bad girl</li>
+            <li>5. Good developer</li>
+        </ul>
+
+        <h1 class="position-relative">Position</h1>
+        <ul>
+            <li>Relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+
+        <div class="father">
+            <div class="child">
+            </div>
+        </div>
+
+        <footer></footer>
+    </body>
+</html>

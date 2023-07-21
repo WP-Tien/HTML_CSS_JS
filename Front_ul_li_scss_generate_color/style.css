@@ -1,0 +1,32 @@
+body,
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+ul li {
+  padding: 2rem;
+  border-radius: 0.2rem;
+}
+ul li:nth-child(1) {
+  background-color: #ff616c;
+}
+ul li:nth-child(2) {
+  background-color: #ff7a83;
+}
+ul li:nth-child(3) {
+  background-color: #ff949b;
+}
+ul li:nth-child(4) {
+  background-color: #ffadb3;
+}
+ul li:nth-child(5) {
+  background-color: #ffc7ca;
+}
+
+/*# sourceMappingURL=style.css.map */

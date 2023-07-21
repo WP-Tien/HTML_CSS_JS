@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 13px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* GLOBAL  */
+.container {
+  max-width: 1026px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #1c1c1c;
+}
+
+header .top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .top-header .logo {
+  margin-right: 10px;
+}
+header .top-header .logo img {
+  width: 100px;
+  height: 32px;
+  background-size: cover;
+  background-position: center;
+}
+header .top-header .login {
+  display: flex;
+  justify-items: center;
+}
+header .top-header .login .logo img {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+header .top-header .search {
+  flex-grow: 1;
+  padding: 0 10%;
+}
+header .top-header .search .wrap-search {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(219, 219, 219, 0.5);
+  background-color: #fff;
+}
+header .top-header .search .wrap-search img {
+  margin-left: 5px;
+  width: 25px;
+  height: 25px;
+}
+header .top-header .search .wrap-search input[type="search"] {
+  background-color: transparent;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+  border: 0;
+  height: 34px;
+  padding: 5px 0;
+  line-height: 34px;
+  background-clip: padding-box;
+  float: right;
+}
+header .top-header .search .wrap-search input[type="search"]:focus {
+  outline: none;
+}
+
+header .top-header .login .login-text {
+  display: flex;
+  align-items: center;
+}
+header .top-header .login .login-text a {
+  color: #32323d;
+  font-weight: bold;
+  font-size: 14px;
+}
+header .top-header .login .login-text a:hover {
+  color: #6e55b4;
+}
+
+nav {
+  background: #e4e4e4;
+}
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+nav .nav-links li {
+  justify-content: space-between;
+}
+nav .nav-links li a {
+  line-height: 39px;
+  font-weight: 400;
+  padding: 0 15px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+@media screen and (min-width: 992px) {
+  .wrap-page main {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding: 0 10px;
+  }
+
+  .wrap-page aside {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 10px;
+  }
+}
+
+.wrap-page {
+  display: flex;
+  background-color: white;
+  padding: 15px 0;
+  flex-wrap: wrap;
+}
+
+.wrap-page main {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.wrap-page main .banner img {
+  width: 100%;
+  min-width: 100%;
+  height: 275px;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrap-page aside {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.weekly-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.weekly-item .number {
+  font-size: 20px;
+  padding: 0 8px;
+}
+
+.weekly-item .info {
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.weekly-item .info .song-title {
+  margin-bottom: 8px;
+}
+
+.weekly-item .info .singer {
+  font-size: 13px;
+  color: #999;
+}
+
+.weekly-item .view-count {
+  font-size: 13px;
+  color: #999;
+}
+
+.album-cover {
+  width: 128px;
+  height: 128px;
+  background-color: #ddd;
+  background-image: url("https://loremflickr.com/320/240");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.album-cover .overlay {
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+}

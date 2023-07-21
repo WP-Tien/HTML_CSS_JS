@@ -1,0 +1,230 @@
+.navigation {
+  position: relative;
+  height: 7rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  @include flexbox(center, space-between);
+  height: 7rem;
+  width: 100%;
+  padding: 0 1rem;
+  &__logo {
+    a {
+      font-size: 2.5rem;
+      color: $black;
+      padding: 1.6rem;
+      font-weight: 700;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    cursor: pointer;
+
+    svg {
+      height: 2.3rem;
+      width: 2.3rem;
+    }
+  }
+
+  &__menu {
+    width: 50%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+
+  &__list &__link:link,
+  &__list &__link:visited {
+    display: inline-block;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $black;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__list &__link:hover {
+    color: $orange;
+  }
+
+  &__icons {
+    display: flex;
+    position: relative;
+    .icon__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.7rem;
+      border: 1px solid $black;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+      svg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      &:link,
+      &:visited {
+        color: $black;
+      }
+
+      &:hover {
+        background-color: $orange;
+        border: 1px solid $black;
+      }
+    }
+
+    .icon__item:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    #cart__total {
+      font-size: 1rem;
+      position: absolute;
+      top: 0.2rem;
+      right: -0.6rem;
+      background-color: $orange;
+      padding: 0.2rem 0.4rem;
+      border-radius: 100%;
+      color: $primaryColor;
+    }
+  }
+}
+
+.fix__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 1200;
+}
+
+.icon {
+  &__item {
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
+
+.menu {
+  &__top {
+    display: none;
+  }
+}
+
+/*
+=====================================
+NAVIGATION MEDIA QUERY 
+=====================================
+*/
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    &__menu {
+      position: fixed;
+      top: 0;
+      left: -30rem;
+      width: 0;
+      background-color: $white;
+      z-index: 99999;
+      height: 100%;
+      transition: all 0.3s;
+      &.open {
+        left: 0;
+        width: 30rem;
+      }
+    }
+
+    &__logo {
+      width: 50%;
+    }
+
+    &__hamburger {
+      display: block;
+    }
+
+    &__category {
+      color: $white;
+      font-size: 2.3rem;
+      font-weight: 700;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.6rem 1rem;
+
+      .nav__link:link,
+      .nav__link:visited {
+        padding: 1.6rem 0;
+        width: 100%;
+        color: $grey2;
+      }
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $orange;
+      padding: 1.8rem 1rem;
+
+      svg {
+        height: 1.6rem;
+        width: 1.6rem;
+        fill: $primaryColor;
+      }
+    }
+  }
+
+  body.active {
+    &:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $black none no-repeat 0 0;
+      opacity: 0.7;
+      z-index: 999;
+      transition: 0.8s;
+    }
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .nav {
+    &__icons {
+      .icon__item {
+        padding: 0.5rem;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}

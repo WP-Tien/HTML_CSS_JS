@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- font-size changed in <html>
+        user zoomed in.
+        user changed their browser’s font setting. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media query units</title>
+    <style>
+        html {
+            /* 32px */
+            font-size: 200%;
+        }
+
+        div {
+            color: white;
+            margin: 0 auto;
+            width: 50%;
+            height: 50px;
+            text-align: center;
+        }
+
+        .pixel {
+            background: red;
+            line-height: 32px;
+            font-size: 32px;
+        }
+
+        @media (min-width: 400px) {
+            .pixel {
+                opacity: .5;
+            }
+        }
+
+        .em {
+            background: green;
+            line-height: 1em;
+            font-size: 1em;
+        }
+
+        /* 400 % 16 */
+        @media (min-width: 25em) {
+            .em {
+                opacity: .5;
+            }
+        }
+
+        .rem {
+            font-size: 1rem;
+            line-height: 1rem;
+            background: blue;
+        }
+
+        /* 400 % 16  */
+        @media (min-width: 25rem) {
+            .rem {
+                opacity: .5;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pixel">
+        Pixel
+    </div>
+    <div class="em">
+        Em
+    </div>
+    <div class="rem">
+        Rem
+    </div>
+
+</body>
+
+</html>

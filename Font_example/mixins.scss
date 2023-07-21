@@ -1,0 +1,25 @@
+/**********/
+/* MIXINS */
+/**********/
+
+/*
+ * Font mixin
+ */
+ @mixin font ( $folder, $variant, $type, $weight, $style ) {
+	$font-path: '../fonts/roboto/#{$folder}';
+
+	@font-face {
+		font-family: '#{$variant}';
+		src: url('#{$font-path}-#{$type}.woff2') format('woff2'),
+			 url('#{$font-path}-#{$type}.woff') format('woff');
+		font-weight: $weight;
+		font-style: $style;
+	}
+
+	@font-face {
+		font-family: '#{$variant}-#{$type}';
+		src: url('#{$font-path}-#{$type}.woff2') format('woff2'),
+			 url('#{$font-path}-#{$type}.woff') format('woff');
+	}
+}
+

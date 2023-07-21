@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation số tăng dần</title>
+</head>
+
+<body>
+    <div id="demo">
+    </div>
+
+    <script>
+        function animateNumber(finalNumber, delay, startNumber = 0, callback) {
+            let currentNumber = startNumber;
+            const interval = window.setInterval(updateNumber, delay);
+            function updateNumber() {
+                if (currentNumber >= finalNumber) {
+                    clearInterval(interval);
+                } else {
+                    currentNumber++;
+                }
+                callback(currentNumber);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            animateNumber(98, 50, 0, function (number) {
+                const formattedNumber = number.toLocaleString();
+                document.getElementById('demo').innerText = formattedNumber;
+            });
+        });
+    </script>
+</body>
+
+</html>
