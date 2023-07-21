@@ -246,7 +246,7 @@ a::after {
 - position: sticky;
 
 # Flexbox :grimacing:
-![alt text](/flex_terms.png)
+![alt text](flex_terms.png)
 
 - display: flex| inline-flex
 - flex-direction: row| column
