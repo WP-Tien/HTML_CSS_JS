@@ -271,6 +271,17 @@ a::after {
 </header>
 ```
 
+- Block Element Modifier
+- BLOCK: sandalone component that is meaningful on its own.
+- ELEMENT: part of a block that has no standalone meaning
+- MODIFIER: a different version of a block or an element.
+
+```
+.block {}
+.block__element {}
+.block__element--modifier {}
+```
+
 # Create a triangle in CSS :sparkling_heart:
 - https://css-tricks.com/snippets/css/css-triangle/
 - https://css-tricks.com/the-shapes-of-css/
