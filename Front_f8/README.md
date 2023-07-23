@@ -231,6 +231,7 @@ a::after {
 - :active
 - :first-child 
 - :last-child
+- :target
 
 # Pseudo Elements( Phần tử giả ) :fire:
 - ::before
