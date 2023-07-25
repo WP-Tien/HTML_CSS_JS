@@ -248,6 +248,7 @@ a::after {
 
 # Flexbox :grimacing:
 ![alt text](flex_terms.png)
+![alt text](flex.png)
 
 - display: flex| inline-flex
 - flex-direction: row| column
