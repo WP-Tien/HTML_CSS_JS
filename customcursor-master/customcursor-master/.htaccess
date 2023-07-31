@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Protected Area"
-AuthUserFile /opt/bitnami/apache2/htdocs/stk.works/customcursor/.htpasswd
-Require valid-user

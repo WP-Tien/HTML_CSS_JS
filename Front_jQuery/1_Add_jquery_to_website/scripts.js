@@ -4,6 +4,9 @@
 // });
 
 // JS code
-document.getElementById("test").onclick = function(e) {
+document.getElementById("test").onclick = function (e) {
     e.target.closest('p').style.display = 'none';
 }
+
+
+
