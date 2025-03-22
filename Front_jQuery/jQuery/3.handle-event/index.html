@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #textBox {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="textBox">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    </div>
+
+    <script src="assets/jquery-3.5.1.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            $('#textBox').on('click', function () {
+                $('#textBox').html('You are clicked me');
+            });
+
+            $('#textBox').on('mouseleave', function () {
+                $('#textBox').html('mouse leave');
+            });
+        });
+    </script>
+</body>
+
+</html>

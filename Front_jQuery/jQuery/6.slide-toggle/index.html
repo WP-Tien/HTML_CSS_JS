@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#" id="show">Click to show</a> | <a href="#" id="hide">Click to hide</a> | <a href="#"
+        id="toggle">Toggle</a>
+
+    <div class="txtBox">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus esse nulla quasi neque
+        consequuntur numquam impedit aperiam. Soluta qui, in alias minima neque animi ullam consectetur iste modi
+        repudiandae ducimus.</div>
+
+
+    <script src="assets/jquery-3.5.1.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            $("#show").on('click', function () {
+                $(".txtBox").slideUp('slow', function () {
+
+                })
+            })
+
+            $("#hide").on('click', function () {
+                $(".txtBox").slideDown('slow', function () {
+
+                })
+            })
+
+            $("#toggle").on('click', function (e) {
+                e.preventDefault();
+
+                $(".txtBox").toggle();
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -449,12 +449,10 @@ img {
   .banner__button > .btn {
     font-size: 1.4rem;
   }
-
   .category__item {
     width: calc(50% - 22.5px);
     margin-bottom: 2.5rem;
   }
-
   .feature {
     padding-top: 10rem;
   }
@@ -478,7 +476,6 @@ img {
   .feature__image img {
     margin: 0 auto 5rem;
   }
-
   .partner__title {
     padding-bottom: 4rem;
     margin-bottom: 4rem;
@@ -488,15 +485,13 @@ img {
   .header__menu {
     display: none;
   }
-
   .category__item {
-    width: calc(100%);
+    width: 100%;
     margin-bottom: 2.5rem;
   }
   .category__image {
     height: 15rem;
   }
-
   .partner {
     margin-bottom: 5rem;
   }
@@ -511,7 +506,6 @@ img {
   .partner__item img {
     margin: 0 auto;
   }
-
   .connect {
     margin-bottom: 5rem;
   }
@@ -522,7 +516,6 @@ img {
     width: calc(50% - 1rem);
     margin-bottom: 2rem;
   }
-
   .subscribe__container {
     flex-direction: column;
   }
@@ -533,7 +526,6 @@ img {
   .subscribe__info {
     width: 100%;
   }
-
   .footer__container {
     flex-wrap: wrap;
   }
@@ -549,7 +541,6 @@ img {
   .banner__buttons > .btn {
     font-size: 1.2rem;
   }
-
   .subscribe__button {
     display: none;
   }

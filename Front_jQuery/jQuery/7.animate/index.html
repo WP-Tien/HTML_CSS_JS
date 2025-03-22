@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="#" id="grow">Grow</a> | <a href="#" id="move">Move</a> | <a href="#" id="many">Many</a>
+
+    <div class="txtBox">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Natus esse nulla quasi neque
+        consequuntur numquam impedit aperiam. Soluta qui, in alias minima neque animi ullam consectetur iste modi
+        repudiandae ducimus.
+    </div>
+
+    <script src="assets/jquery-3.5.1.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            $('#grow').click(function () {
+                $('.txtBox').animate({
+                    width: '500px'
+                }, 1000);
+            });
+
+            $('#move').click(function () {
+                $('.txtBox').animate({
+                    marginLeft: '200px'
+                }, 1000);
+            });
+
+            $('#many').click(function () {
+                $('.txtBox').animate({
+                    marginLeft: '100px',
+                    fontSize: '40px'
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>

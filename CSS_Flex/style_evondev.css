@@ -21,11 +21,12 @@ body {
   /* align-items: flex-start; */
   /* align-items: flex-end; */
   /* align-items: center; */
-  /* align-items: baseline; Canh theo bước chữ của dòng đầu tiên */
+  /* align-items: baseline; */
+  /* Canh theo bước chữ của dòng đầu tiên */
 
   /* Vertical */
   /* justify-content: flex-end; */
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   /* justify-content: space-between; */
   /* justify-content: space-around; */
   /* justify-content: space-evenly; */
@@ -37,5 +38,6 @@ body {
 .list__item {
   margin: 0 var(--spacing);
   /* width: 30%; */
-  width: calc(33.33% - var(--spacing) * 2); /* spacing 2 bên nên * 2 */
+  width: calc(33.33% - var(--spacing) * 2);
+  /* spacing 2 bên nên * 2 */
 }

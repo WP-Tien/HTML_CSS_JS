@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="newText">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, nostrum, maxime reprehenderit omnis saepe
+        molestias voluptatibus quasi nemo eum ad tenetur culpa non illum eos! Iste odio nam excepturi rerum?
+    </div>
+
+    <script src="./assets/jquery-3.5.1.min.js"></script>
+    <script>
+        $("document").ready(function () {
+            var dom = $("<p>paragraph</p>");
+
+            dom.append('<h2>Heading</h2>');
+
+            $("#newText").html(dom);
+        });
+    </script>
+</body>
+
+</html>

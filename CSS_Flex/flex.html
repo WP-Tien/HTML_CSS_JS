@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,25 @@
             display: flex;
         }
 
-        #main div:nth-of-type(1) {flex-grow: 1;}
-        #main div:nth-of-type(2) {flex-grow: 3;} 
-        #main div:nth-of-type(3) {flex-grow: 1;} 
-        #main div:nth-of-type(4) {flex-grow: 1;} 
-        #main div:nth-of-type(5) {flex-grow: 1;} 
+        #main div:nth-of-type(1) {
+            flex-grow: 1;
+        }
+
+        #main div:nth-of-type(2) {
+            flex-grow: 3;
+        }
+
+        #main div:nth-of-type(3) {
+            flex-grow: 1;
+        }
+
+        #main div:nth-of-type(4) {
+            flex-grow: 1;
+        }
+
+        #main div:nth-of-type(5) {
+            flex-grow: 1;
+        }
 
         /* Flex basis */
         #main2 {
@@ -54,12 +69,13 @@
         #main3 div:nth-of-type(2) {
             flex-shrink: 3;
         }
-
     </style>
 </head>
+
 <body>
     <h1> The flex-grow Property </h1>
-    <p>The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container.</p>
+    <p>The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside
+        the same container.</p>
     <div id="main">
         <div style="background-color: coral"></div>
         <div style="background-color: lightblue"></div>
@@ -71,7 +87,8 @@
     <hr>
 
     <h1> The flex-basis Property </h1>
-    <p> Set the initial length of the flex items to 50 pixels, with an exception; set the initial length of the second flex item to 100 pixels: </p>
+    <p> Set the initial length of the flex items to 50 pixels, with an exception; set the initial length of the second
+        flex item to 100 pixels: </p>
     <div id="main2">
         <div style="background-color: coral">50px</div>
         <div style="background-color: lightblue">100px</div>
@@ -84,7 +101,8 @@
     <hr>
 
     <h1>The flex-shrink Property</h1>
-    <p>The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the same container.</p>
+    <p>The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the
+        same container.</p>
     <div id="main3">
         <div style="background-color: coral"></div>
         <div style="background-color: lightblue"></div>
@@ -93,4 +111,5 @@
         <div style="background-color: lightgrey"></div>
     </div>
 </body>
+
 </html>
